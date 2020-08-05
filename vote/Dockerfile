@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install our requirements.txt
 ADD requirements.txt /app/requirements.txt
-RUN pip3 install -r requirements.txt
+RUN sudo pip3 install --upgrade pip3 && pip3 install -r requirements.txt
 
 # Copy our code from the current folder to /app inside the container
 ADD . /app
