@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install our requirements.txt
 ADD requirements.txt /app/requirements.txt
-RUN sudo pip3 install --upgrade pip3 --no-cache-dir && pip3 install -r requirements.txt --no-cache-dir
+RUN sudo pip install --upgrade pip --no-cache-dir && pip install -r requirements.txt --no-cache-dir
 
 # Copy our code from the current folder to /app inside the container
 ADD . /app
